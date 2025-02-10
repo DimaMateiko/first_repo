@@ -5,7 +5,7 @@ Custom Css
 /* html{
     overflow-x: hidden !important;
 } */
-.goida{
+/* .goida{
     position: relative;
    
     
@@ -13,53 +13,39 @@ Custom Css
 
 
 
-@media (min-width: 1200px){
-    .content-element{
-        left: 210px;
-    }
 
+
+@media (min-width: 1200px){
     .goida2{
-        margin-bottom: -300px;
+        max-height: 1000px;
     }
-    
+    .goida2{
+        margin-bottom: 100px;
+    }
 }
 
 @media (min-width: 992px){
-    .content-element{
-        left: 190px;
-    }
     .goida2{
-        margin-bottom: -300px;
+        max-height: 1400px;
     }
     
 }
 
 @media (min-width: 768px){
-    /* .shop-picture{
-        width: 40vh;
-    } */
-    .goida3{
-        margin-top: -800px;
+    .goida2{
+        max-height: 1600px;
     }
 }
 
 @media (min-width: 480px){
-    .shop-picture{
-        width: 30vh;
-    }
-
-    .goida2{
-        margin-bottom: 300px;
-    }
+    
 }
 
 @media (min-width: 320px){
     
-}
+} */
 
 
 
-
-
-
+/* *:not(.goida2), *:not(.goida2)::after, *:not(.goida2)::before {box-sizing: border-box;} */
 
