@@ -49,3 +49,6 @@ Custom Css
 
 /* *:not(.goida2), *:not(.goida2)::after, *:not(.goida2)::before {box-sizing: border-box;} */
 
+.brand-img{
+    cursor: auto;
+}
