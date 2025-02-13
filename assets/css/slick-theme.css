@@ -1,11 +1,11 @@
 @charset 'UTF-8';
-/* Slider */
+
 .slick-loading .slick-list
 {
     background: #fff url('../img/ajax-loader.gif') center center no-repeat;
 }
 
-/* Icons */
+
 @font-face
 {
     font-family: 'slick';
@@ -18,7 +18,7 @@
          url('../webfonts/slick.ttf') format('truetype'),
          url('../webfonts/slick.svg#slick') format('svg');
 }
-/* Arrows */
+
 .slick-prev,
 .slick-next
 {
@@ -116,7 +116,7 @@
     content: '←';
 }
 
-/* Dots */
+
 .slick-dotted.slick-slider
 {
     margin-bottom: 30px;
