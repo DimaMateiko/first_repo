@@ -95,79 +95,178 @@
       </div>
     </div>
 
+    <style>
+      .slider-container {
+        position: relative;
+        max-width: 1200px;
+        height: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        background-color: #fff;
+      }
+
+      @media (max-width: 768px) {
+  .slider-container {
+    height: auto;
+  }
+
+  .slides {
+    height: auto;
+  }
+
+  .slide {
+    height: auto;
+    padding: 1rem;
+    /* убираем flex-direction: column; */
+  }
+
+  .slide-content {
+    max-width: 60%; /* чуть больше места под текст */
+    padding: 0.5rem;
+  }
+
+  .slide img {
+    max-height: 200px;
+    max-width: 40%;
+  }
+}
     
-    <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
-        <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1"></li>
-        <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="container">
-            <div class="row p-5">
-              <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                <img class="img-fluid" src="./assets/img/banner_img_01.jpg" alt="" />
-              </div>
-              <div class="col-lg-6 mb-0 d-flex align-items-center">
-                <div class="text-align-left align-self-center">
-                  <h1 class="h1 text-success"><b>Zay</b> eCommerce</h1>
-                  <h3 class="h2">Fashion is more than just clothing</h3>
-                  <p>
-                    We source our products from top brands and emerging designers, ensuring high quality and uniqueness. Whether you’re looking for a chic new
-                    outfit, a timeless accessory, or the perfect gift, Zay has you covered.
-                  </p>
-                </div>
-              </div>
-            </div>
+      .slides {
+        display: flex;
+        height: 100%;
+        transition: transform 0.5s ease-in-out;
+      }
+    
+      .slide {
+        flex: 0 0 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+        box-sizing: border-box;
+        height: 100%;
+      }
+    
+      .slide img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        border-radius: 8px;
+        flex: 1;
+      }
+    
+      .slide-content {
+        flex: 1;
+        padding: 1rem;
+        max-width: 50%;
+      }
+    
+      .slide-content h1, .slide-content h3, .slide-content p {
+        margin: 0.5rem 0;
+      }
+    
+      .slider-controls {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        padding: 0 1rem;
+        box-sizing: border-box;
+      }
+    
+      .slider-button {
+        background: rgba(0,0,0,0.3);
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+    
+      .slider-button:hover {
+        background: rgba(0,0,0,0.6);
+      }
+    
+      @media (max-width: 768px) {
+        .slide {
+          flex-direction: column;
+          text-align: center;
+        }
+    
+        .slide-content, .slide img {
+          max-width: 100%;
+        }
+    
+        .slide img {
+          margin-top: 1rem;
+        }
+      }
+    </style>
+    
+    <div class="slider-container">
+      <div class="slides" id="slider">
+        <div class="slide">
+          <div class="slide-content">
+            <h1 class="h1 text-success"><b>Zay</b> eCommerce</h1>
+            <h3 class="h2">Fashion is more than just clothing</h3>
+            <p>We source our products from top brands and emerging designers...</p>
           </div>
+          <img src="./assets/img/banner_img_01.jpg" alt="Slide 1" />
         </div>
-        <div class="carousel-item">
-          <div class="container">
-            <div class="row p-5">
-              <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                <img class="img-fluid" src="./assets/img/banner_img_02.jpg" alt="" />
-              </div>
-              <div class="col-lg-6 mb-0 d-flex align-items-center">
-                <div class="text-align-left">
-                  <h1 class="h1">Proident occaecat</h1>
-                  <h3 class="h2">Aliquip ex ea commodo consequat</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iusto omnis cumque repellendus minima itaque dolores dolorum officiis dolorem,
-                    corrupti saepe exercitationem numquam reiciendis eum in minus praesentium porro quam.
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div class="slide">
+          <div class="slide-content">
+            <h1 class="h1">Proident occaecat</h1>
+            <h3 class="h2">Aliquip ex ea commodo consequat</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
           </div>
+          <img src="./assets/img/banner_img_02.jpg" alt="Slide 2" />
         </div>
-        <div class="carousel-item">
-          <div class="container">
-            <div class="row p-5">
-              <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                <img class="img-fluid" src="./assets/img/banner_img_03.jpg" alt="" />
-              </div>
-              <div class="col-lg-6 mb-0 d-flex align-items-center">
-                <div class="text-align-left">
-                  <h1 class="h1">Repr in voluptate</h1>
-                  <h3 class="h2">Ullamco laboris nisi ut</h3>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas sequi amet porro placeat quod suscipit nihil dolorem, sunt ut eveniet
-                    esse fugiat ipsam nostrum odit distinctio repellat officia ea animi!
-                  </p>
-                </div>
-              </div>
-            </div>
+        <div class="slide">
+          <div class="slide-content">
+            <h1 class="h1">Repr in voluptate</h1>
+            <h3 class="h2">Ullamco laboris nisi ut</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit...</p>
           </div>
+          <img src="./assets/img/banner_img_03.jpg" alt="Slide 3" />
         </div>
       </div>
-      <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
-        <i class="fas fa-chevron-left"></i>
-      </a>
-      <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
-        <i class="fas fa-chevron-right"></i>
-      </a>
+    
+      <div class="slider-controls">
+        <button class="slider-button" onclick="prevSlide()">‹</button>
+        <button class="slider-button" onclick="nextSlide()">›</button>
+      </div>
     </div>
+    
+    <script>
+      const slides = document.getElementById("slider");
+      const totalSlides = slides.children.length;
+      let index = 0;
+    
+      function showSlide(i) {
+        slides.style.transform = `translateX(-${i * 100}%)`;
+      }
+    
+      function nextSlide() {
+        index = (index + 1) % totalSlides;
+        showSlide(index);
+      }
+    
+      function prevSlide() {
+        index = (index - 1 + totalSlides) % totalSlides;
+        showSlide(index);
+      }
+    
+      // Автопрокрутка каждые 5 секунд
+      setInterval(nextSlide, 5000);
+    </script>
+    
     
     <section class="container py-5">
       <div class="row text-center pt-3">
